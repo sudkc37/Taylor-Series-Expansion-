@@ -7,11 +7,17 @@ Original file is located at
     https://colab.research.google.com/drive/1VaWRJzSUTk5yBf4SpacDlF6CrTpgSGV9
 
 Understanding the Dynamic of Taylor Series Expansion.
+
+f(x) = f(a) + f'(a)x + f''(a)(x^2/2!) + f'''(a)(x^3/3!) + f''''(a)(x^4/4!) + .......
+where,
+a = 0
 """
+
+Approximating Sin function using Taylor Series Expansion, we get,
+f(x) = x - (x^3/3!) + (x^5/5!) - (x^7/7!) + ......
 
 import numpy as np
 import matplotlib.pyplot as plt
-
 plt.figure(figsize=(10,6))
 x = np.linspace(-10, 10, 2000)
 y = np.sin(x)
@@ -47,12 +53,13 @@ plt.grid(False)
 plt.show()
 
 
+Approximating Cosin function using Taylor Series Expansion, we get,
+f(x) = 1 - (x^2/2!) + (x^4/4!) - (x^6/6!) + ...... 
 
 plt.figure(figsize=(10,6))
 x = np.linspace(-10,10, 2000)
 y = np.cos(x)
 plt.plot(x,y, 'k', label='cos')
-
 
 second = 1-(x**2)/np.math.factorial(2)
 plt.plot(x, second, 'b--', label='2nd order')
@@ -83,6 +90,10 @@ plt.title('Taylor Series Expansion of Cos(x)')
 plt.grid(False)
 plt.show()
 
+
+# Approximating e^x function:
+f(e^x) = 1 + x + (x^2/2!) + (x^3/3!) + (x^4/4!) + .......
+
 x = np.linspace(-10, 10 ,2000)
 y = np.exp(x)
 plt.xlim(-10, 10)
@@ -109,7 +120,6 @@ plt.grid(False)
 plt.show()
 
 #this can be achived usig loop
-
 # using loop
 
 plt.figure(figsize=(10,6))
@@ -133,3 +143,4 @@ plt.ylabel('Function Value')
 plt.title('Taylor Series Approximation of exp^x')
 plt.show()
 
+#Taylor series expansion is valid and hold for any delta x, until it hit a point where the derivatives are discountinous. 
