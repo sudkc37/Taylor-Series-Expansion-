@@ -7,7 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1VaWRJzSUTk5yBf4SpacDlF6CrTpgSGV9
 
 #Understanding the Dynamic of Taylor Series Expansion.
-
+By definition:
 f(x) = f(a) + f'(a)x + f''(a)(x^2/2!) + f'''(a)(x^3/3!) + f''''(a)(x^4/4!) + .......
 where,
 a = 0
